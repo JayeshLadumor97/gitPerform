@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "webpack --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,15 @@
   "bugs": {
     "url": "https://github.com/JayeshLadumor97/gitPerform/issues"
   },
-  "homepage": "https://github.com/JayeshLadumor97/gitPerform#readme"
+  "homepage": "https://github.com/JayeshLadumor97/gitPerform#readme",
+  "dependencies": {
+    "angular": "^1.7.2",
+    "angular-ui-router": "^1.0.22",
+    "oclazyload": "^1.1.0",
+    "webpack": "^4.29.6",
+    "webpack-dev-server": "^3.2.1"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.2.3"
+  }
 }
