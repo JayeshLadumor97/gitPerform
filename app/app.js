@@ -12,28 +12,31 @@ App.config(["$stateProvider","$urlRouterProvider",function($stateProvider,$urlRo
     .state("first", {
         url: "/first",
         template: "<first-component></first-component>",
-        resolve: {
-            deps: [
-              "$ocLazyLoad",
-              function ($ocLazyLoad) {
-                alert('kkhk')
-              }
-            ]
-          }
+        // resolve: {
+        //     deps: [
+        //       "$ocLazyLoad",
+        //       function ($ocLazyLoad) {
+        //         alert('kkhk');
+        //       }
+        //     ]
+        //   }
     })
     .state("home",{
         url : "/home",
         template : "<home-component></home-component>"
+    })
+    .state("dashboard",{
+        url : "/dashboard",
+        template : "<dashboard-component></dashboard-component>"
     });
 
 }]);
 
-
+// First Component --
 function firstComponent(){
     var ctrl = this;
 
     ctrl.$onInit = function(){
-        alert('init component controller');
     }
 }
 
@@ -45,12 +48,11 @@ angular.module("AllDayDr")
     bindings: {}
 })
 
-
+// Home Component
 function homeComponent(){
     var ctrl = this;
 
     ctrl.$onInit = function(){
-        alert('init home component controller');
     }
 }
 
@@ -62,6 +64,21 @@ angular.module("AllDayDr")
     bindings: {}
 })
 
+// Dashboard Component --
+function dashboardComponent(){
+    var ctrl = this;
+
+    ctrl.$onInit = function(){
+    }
+}
+
+angular.module("AllDayDr")
+.component('dashboardComponent',{
+    templateUrl : 'app/component/dashboardComponent/dashboardComponent.html',
+    transclude: true,
+    controller: dashboardComponent,
+    bindings: {}
+})
 
 
 
